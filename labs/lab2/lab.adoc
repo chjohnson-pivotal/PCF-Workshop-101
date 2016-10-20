@@ -1,4 +1,4 @@
-= Lab 2 - Binding to Cloudfoundry Services
+= Lab 2 - Binding to Cloud Foundry Services
 
 [abstract]
 --
@@ -53,6 +53,18 @@ From the Apps Manager UI service marketplace, select _MySQL for Pivotal Cloudfou
 In the drop-down list next to _Bind to App_ select your workshop application.
 +
 image::lab3.png[]
++
+Alternatively, you can use the Cloud Foundry CLI to create and bind services from the command line.  To create a service from the command line, run the following command:
++
+----
+$ cf create-service p-mysql 100mb adam-db
+----
++
+And to bind the service to an existing application, run the following command: 
++
+----
+cf bind-service workshop adam-db
+----
 
 . Notice the admonition to `Use 'cf restage' to ensure your env variable changes take effect`.
 Let's take a look at the environment variables for our application. We can do this by viewing to the homepage of the application.
