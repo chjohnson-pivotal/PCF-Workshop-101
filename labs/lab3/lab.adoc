@@ -146,7 +146,7 @@ image::lab3.png[]
 +
 image::lab4.png[]
 
-. We can just as easily remove a route by clicking on _Unmap_ on the route you wish to remove.
+. We can just as easily remove a route by clicking on the red 'x' on the route you wish to remove.
 +
 image::lab5.png[]
 +
