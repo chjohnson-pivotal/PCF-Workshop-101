@@ -3,5 +3,5 @@ applications:
 - name: scale-demo
   memory: 128M
   instances: 1
-  host: scale
+  host: scale-${random-word}
   path: .
