@@ -7,7 +7,7 @@
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf api https://api.devcloudwest.inbcu.com --skip-ssl-validation
+$ cf api https://api.sys.azure.rick-ross.com --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
@@ -116,7 +116,7 @@ Routes can actually be bound to multiple applications to support techniques such
 <7> Here we see the version of the Ruby that has been chosen and installed.
 <8> And here we see our apps dependencies that have been discovered and installed.
 <9> The complete package of your application and all of its necessary runtime components is called a _droplet_.
-Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html[Droplet Execution Agents (DEA's)]_ for execution.
+Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore so that it can be easily copied to one or more _http://docs.pivotal.io/pivotalcf/1-8/concepts/diego/diego-architecture.html[Diego Cells]_ for execution.
 <10> The CLI tells you exactly what command and argument set was used to start your application.
 <11> Finally the CLI reports the current status of your application's health.
 ====
@@ -150,5 +150,5 @@ $ cf stop <<app_name>>
 . Delete the deployed application using the CLI
 +
 ----
-$ cf delete <<app_name>>
+$ cf delete -r <<app_name>>
 ----
