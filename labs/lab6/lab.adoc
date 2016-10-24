@@ -151,6 +151,8 @@ $ cf restage env
 ----
 
 . Visit the application in your browser by hitting the route that was generated. Notice that you can now add attendees. 
++
+image::lab-with-db.png[]
 
 == Interact with App from CF CLI
 
