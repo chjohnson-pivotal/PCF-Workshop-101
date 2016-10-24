@@ -27,7 +27,7 @@ Follow the prompts.  You should have a welcome card with your username and passw
 
 == Install .NET Core
 
-. Download .NET Core from link:https://www.microsoft.com/net/core for your operating system
+. Download .NET Core from link::https://www.microsoft.com/net/core[] for your operating system
 . Note that you might need to open a new shell/termina/command window to run the donet core commands
 
 == Prepare Application
@@ -43,6 +43,8 @@ $ dotnet restore
 ----
 $ dotnet run
 ----
+
++
 Note the URL that the application is running on
 +
 ====
