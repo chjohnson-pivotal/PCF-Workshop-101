@@ -106,8 +106,6 @@ buildpack: binary_buildpack
      state     since                    cpu    memory           disk         details
 #0   running   2016-10-24 09:55:08 AM   0.0%   104.8M of 512M   3.8M of 1G
 
-
-$
 ----
 <1> The CLI is using a manifest to provide necessary configuration details such as application name, memory to be allocated, the stack to be used (in this case Windows2012R2), the number of instances requested to start, and path to the application artifact.
 Take a look at `manifest.yml` to see how.
