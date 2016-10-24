@@ -166,7 +166,7 @@ Also, if you're paying attention to the log tail, you'll see some interesting lo
 2015-08-11T09:12:38.08-0400 [App/3]      OUT [CONTAINER] org.apache.catalina.core.StandardEngine            INFO    Starting Servlet Engine: Apache Tomcat/8.0.21
 2015-08-11T09:12:38.11-0400 [App/3]      OUT [CONTAINER] org.apache.catalina.startup.HostConfig             INFO    Deploying web application directory /home/vcap/app/.java-buildpack/tomcat/webapps/ROOT  <2>
 ----
-<1> The DEA indicates that it is starting another instance of the application as a result of the Health Manager observing a difference between the desired and actual state (i.e. running instances = 1 vs. running instances = 0).
+<1> The Diego Cell indicates that it is starting another instance of the application as a result of the Health Manager observing a difference between the desired and actual state (i.e. running instances = 1 vs. running instances = 0).
 <2> The new application instance starts logging events as it starts up.
 ====
 
