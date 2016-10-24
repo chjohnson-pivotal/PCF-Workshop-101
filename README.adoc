@@ -15,4 +15,4 @@
 ** link:labs/lab6/lab.adoc[Advanced Lab - Deploying a .NET Application]
 ** link:labs/lab7/lab.adoc[Advanced Lab - Deploying a .NET Core Application]
 ** link:cf-spring-trader/README.md[Advanced Lab - Spring Cloud Services, _**Java** Only_]
-** link:labs/lab5/continuous-delivery-lab.adoc[Advanced Lab - Jenkins Integration]
+
