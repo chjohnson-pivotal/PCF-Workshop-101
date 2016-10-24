@@ -150,6 +150,8 @@ Note the command reminds you to restage the application
 $ cf restage env
 ----
 
+. Visit the application in your browser by hitting the route that was generated. Notice that you can now add attendees. 
+
 == Interact with App from CF CLI
 
 . Get information about the currently deployed application using CLI apps command:
