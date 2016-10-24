@@ -1,0 +1,5 @@
+---
+applications:
+- name: dncore 
+  host: dncore-${random-word}
+  memory: 512m
