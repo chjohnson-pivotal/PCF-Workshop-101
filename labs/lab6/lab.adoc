@@ -27,7 +27,7 @@ Follow the prompts.  You should have a welcome card with your username and passw
 
 == Push It!
 
-. Change to the _ViewEnvironmentt_ application directory (this is the folder containing the code files and manifest.yml):
+. Change to the _ViewEnvironment_ application directory (this is the folder containing the code files and manifest.yml):
 +
 ----
 $ cd $BOOTCAMP_HOME/pcf-dotnet-environment-viewer/ViewEnvironment
