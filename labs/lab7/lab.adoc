@@ -225,7 +225,7 @@ buildpack: ASP.NET Core (buildpack-1.0.2)
 
 $
 ----
-
+====
 . Visit the application in your browser by hitting the route that was generated.
 +
 image::lab-pcf.png[] 
