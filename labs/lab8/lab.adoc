@@ -98,18 +98,21 @@ $ git clone https://github.com/rossr3-pivotal/flight-school.git
 ```
 +
 or download and unzip/decompress the flight-school-master.zip file
-
++
 image::download-flight-school.png[]
-
++
 Note that when you uncompress this zip file, the folder name is flight-school-master. 
 +
 2. Change into the folder that contains the project code
 +
 If you used the git clone command then:
++
 ```
 $ cd flight-school
 ```
++
 or if you downloaded the zip file, use this command:
++
 ```
 $ cd flight-school-master
 ```
