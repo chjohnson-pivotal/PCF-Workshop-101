@@ -4,11 +4,29 @@ In this exercise, we will be deploying all the applications in the project to th
 
 ### Perform the Gradle build
 
-. Change to the PCF-Workshop-Sony/cf-spring-trader directory.
+. Change to the cf-spring-trader directory.
+
+Mac/Linux
+```
+$ cd cf-spring-trader
+```
+
+Windows
+```
+> cd cf-spring-trader
+```
 
 . Kick off the Gradle build
 
-  `./gradlew clean assemble`
+Mac/Linux
+```
+$ ./gradlew clean assemble
+```
+
+Windows
+```
+> gradlew.bat clean assemble
+```
   
 ### Push the applications to CloudFoundry using the manifest-all.yml file
 
