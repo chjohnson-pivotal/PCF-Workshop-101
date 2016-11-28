@@ -5,6 +5,7 @@ memory: 1G
 env:
     SPRING_PROFILES_DEFAULT: cloud
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+    TRUST_CERTS: api.run.haas-98.pez.pivotal.io,uaa.run.haas-98.pez.pivotal.io
 applications:
 - name: webtrader
   path: springboottrades-web/build/libs/web-0.2.jar

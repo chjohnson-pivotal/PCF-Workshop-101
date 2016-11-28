@@ -5,9 +5,9 @@ memory: 1G
 env:
     SPRING_PROFILES_DEFAULT: cloud
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
-    TRUST_CERTS: cfapps.haas-98.pez.pivotal.io,api.run.haas-98.pez.pivotal.io,uaa.run.haas-98.pez.pivotal.io
+    TRUST_CERTS: api.run.haas-98.pez.pivotal.io,uaa.run.haas-98.pez.pivotal.io
 applications:
-- name: portfolio-cj
+- name: portfolio
   path: springboottrades-portfolio/build/libs/portfolio-0.2.jar
   services:
     - trader-db

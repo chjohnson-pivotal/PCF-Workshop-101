@@ -18,7 +18,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,7 +40,6 @@ public class MarketService {
 	private final static long REFRESH_PERIOD = 30000l;
 	
 	@Autowired
-	@LoadBalanced
 	private RestTemplate restTemplate;
 
     @Value("${pivotal.app.symbols.it:EMC,IBM,VMW}")
