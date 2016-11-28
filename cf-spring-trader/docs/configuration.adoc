@@ -2,9 +2,9 @@
 
 One of the benefits of Spring Cloud Services is the ability to configure a running microservice via a github repository. This can be useful especially in situations where localization is needed. This step was done when the create-services script was run. Let's verify the Git repository that we are using.
 
-==== Set up the Git Repository
+==== Git Repository
 
-. For the repository https://github.com/rossr3-pivotal/trader-config-repo.git
+. For this lab we will be using the following repository: https://github.com/rossr3-pivotal/trader-config-repo.git
 
 
 ==== Validate the Config-Server Configuration
@@ -13,13 +13,7 @@ One of the benefits of Spring Cloud Services is the ability to configure a runni
 
 . In your space, under services, click the Config Server and select *Manage* next to the *config-server* icon.
 
-```
-{
-	"count": 1,
-	"git": {
-		"uri": "https://github.com/rossr3-pivotal/trader-config-repo.git"
-	}
-}
-```
+image::config-server-manage.png[]
 
+image::config-server-dashboard.png[]
 
