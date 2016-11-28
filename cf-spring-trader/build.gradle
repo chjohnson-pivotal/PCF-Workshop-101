@@ -131,6 +131,7 @@ project(':springboottrades-portfolio') {
 		compile('org.springframework.boot:spring-boot-starter-data-jpa')
 		compile('org.springframework.boot:spring-boot-starter-jersey')
 		compile('org.springframework.boot:spring-boot-starter-web')
+		compile('org.springframework:spring-web')
 	
 		testCompile('org.springframework.boot:spring-boot-starter-test')	
 
