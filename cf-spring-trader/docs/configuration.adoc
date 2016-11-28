@@ -16,6 +16,6 @@ One of the benefits of Spring Cloud Services is the ability to configure a runni
 image::config-server-manage.png[]
 
 . Be sure that the configuration looks like this:
-
++
 image::config-server-dashboard.png[]
 
