@@ -38,7 +38,6 @@ public class PortfolioService {
 	OrderRepository repository;
 	
 	@Autowired
-	@LoadBalanced
 	private RestTemplate restTemplate;
 	/**
 	 * Retrieves the portfolio for the given accountId. 
