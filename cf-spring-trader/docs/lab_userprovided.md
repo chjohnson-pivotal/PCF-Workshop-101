@@ -8,7 +8,6 @@ In order for our microservices to be able to connect to the Registry service, we
 ### Exercise
 1. Create the *marketplace services* using the CLI. This script is located in the cf-spring-trader folder of this repository.
 
-+
 Linux
 ```
 $ cd cf-spring-trader
