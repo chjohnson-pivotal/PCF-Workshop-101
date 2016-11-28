@@ -12,8 +12,10 @@ One of the benefits of Spring Cloud Services is the ability to configure a runni
 . Log into the console at https://apps.run.haas-98.pez.pivotal.io/
 
 . In your space, under services, click the Config Server and select *Manage* next to the *config-server* icon.
-
++
 image::config-server-manage.png[]
+
+. Be sure that the configuration looks like this:
 
 image::config-server-dashboard.png[]
 
