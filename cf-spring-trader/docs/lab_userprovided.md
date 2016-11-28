@@ -8,16 +8,22 @@ In order for our microservices to be able to connect to the Registry service, we
 ### Exercise
 1. Create the *marketplace services* using the CLI. This script is located in the cf-spring-trader folder of this repository.
 
++
+Linux
 ```
 $ cd cf-spring-trader
 $ ./create-services.sh
+```
+Windows
+```
+> cd sf-spring-trader
+> create-services.bat
 ```
 
 This simple script creates 4 services:
 
 ----
 
-  #!/usr/bin/env bash<br>
   cf create-service p-mysql 100mb-dev trader-db<br>
   cf create-service p-service-registry standard trader-registry<br>
   cf create-service p-config-server standard config-server<br>
@@ -26,6 +32,6 @@ This simple script creates 4 services:
 ----
 
 # Summary
-You have now created marketplace services via the CLI! You can now log in and see the services in your space at `https://console.pcfsony.com`, or see the services from the CLI.
+You have now created marketplace services via the CLI! You can now log in and see the services in your space at `https://apps.run.haas-98.pez.pivotal.io`, or see the services from the CLI.
 
   `> cf services`
