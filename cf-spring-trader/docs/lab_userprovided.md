@@ -6,9 +6,12 @@ In the previous lab, you deployed a single microservice that has no dependencies
 In order for our microservices to be able to connect to the Registry service, we will have to create a [*User-provided service*](http://docs.pivotal.io/pivotalcf/devguide/services/user-provided.html). This tells our microservices where to find the registry service.
 
 ### Exercise
-1. Create the *marketplace services* using the CLI.
+1. Create the *marketplace services* using the CLI. This script is located in the cf-spring-trader folder of this repository.
 
-  `./create-services.sh`
+```
+$ cd cf-spring-trader
+$ ./create-services.sh
+```
 
 This simple script creates 4 services:
 
