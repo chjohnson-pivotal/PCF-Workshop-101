@@ -6,6 +6,7 @@ buildscript {
 		junitVersion = '4.12'
 		mysqlVersion = '5.1.35'
 		bootstrapVersion = '2.3.2'
+		jqueryVersion = '1.9.0'
 	}
 
 	repositories {
@@ -171,9 +172,10 @@ project(':springboottrades-web') {
 		compile('org.springframework.boot:spring-boot-starter-web')
 		compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	
-		testCompile('org.springframework.boot:spring-boot-starter-test')	
+	    compile "org.webjars:jquery:${jqueryVersion}"
+		compile "org.webjars:bootstrap:${bootstrapVersion}"
 	
-		runtime "org.webjars:bootstrap:${bootstrapVersion}"
+		testCompile('org.springframework.boot:spring-boot-starter-test')	
 	}
 }
 
