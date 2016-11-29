@@ -62,7 +62,9 @@ public class MarketService {
 		//manually trip the circuit
 		if("xyz".equalsIgnoreCase(symbol)) throw new RuntimeException("That isn't a valid name!!!");
 
+		logger.debug("calling ws for symbol: " + symbol);
 		Quote quote = restTemplate.getForObject("http://quote-service/quote/{symbol}", Quote.class, symbol);
+		logger.debug("Quote is " + quote);
 		return quote;
 	}
 	
