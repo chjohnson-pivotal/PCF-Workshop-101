@@ -17,13 +17,13 @@ import io.pivotal.portfolio.domain.Quote;
 public class ServiceTestConfiguration {
 	
 	public static final String ACCOUNT_ID = "user";
-	public static final String SYMBOL = "EMC";
+	public static final String SYMBOL = "DVMT";
 	public static final Integer QUANTITY = 1000;
 	public static final BigDecimal PRICE = new BigDecimal(10.00);
 	public static final BigDecimal FEE = new BigDecimal(1.00);
 	public static final Date COMPLETION_DATE = new Date(1329759342904l);
 	
-	public static final String QUOTE_NAME = "EMC Corp";
+	public static final String QUOTE_NAME = "DVMT Corp";
 	public static final SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM d HH:mm:ss zzzXXX yyyy");
 	public static final String QUOTE_DATE_STRING = "Wed May 6 00:00:00 UTC-04:00 2015";
 	public static final double QUOTE_LAST_PRICE = 26.135;
@@ -78,7 +78,7 @@ public class ServiceTestConfiguration {
 	
 	public static Quote quote() {
 		Quote quote = new Quote();
-		quote.setName("EMC Corp");
+		quote.setName("DVMT Corp");
 		quote.setSymbol(SYMBOL);
 		quote.setLastPrice(QUOTE_LAST_PRICE);
 		quote.setChange(QUOTE_CHANGE);

@@ -34,7 +34,7 @@ This requires editing the manifest-\*.yml files in the base directory of the pro
 
 Ensure you have a working quote service application by sending HTTP requests to it, for example:
 
-`curl http://<ROUTE_TO_QUOTE_SERVICE>/quote/EMC`
+`curl http://<ROUTE_TO_QUOTE_SERVICE>/quote/DVMT`
 
 > You can also put the above URL in your browser.
 

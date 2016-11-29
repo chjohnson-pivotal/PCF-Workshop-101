@@ -15,8 +15,8 @@ import io.pivotal.quotes.domain.Quote;
  */
 public class TestConfiguration {
 	
-	public static final String QUOTE_SYMBOL = "EMC";
-	public static final String QUOTE_NAME = "EMC Corp";
+	public static final String QUOTE_SYMBOL = "DVMT";
+	public static final String QUOTE_NAME = "DVMT Corp";
 	public static final SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM d HH:mm:ss zzzXXX yyyy", Locale.ENGLISH);
 	public static final String QUOTE_DATE_STRING = "Wed May 6 00:00:00 UTC-04:00 2015";
 	public static final double QUOTE_LAST_PRICE = 26.135;
@@ -27,7 +27,7 @@ public class TestConfiguration {
 	public static final String COMPANY_EXCHANGE = "NASDAQ";
 	public static final String NULL_QUOTE_SYMBOL = "LALALALA";
 	/*
-	 * {"Status":"SUCCESS","Name":"EMC Corp","Symbol":"EMC","LastPrice":26.135,
+	 * {"Status":"SUCCESS","Name":"DVMT Corp","Symbol":"DVMT","LastPrice":26.135,
 	 * "Change":0.00500000000000256,"ChangePercent":0.0191350937619692,
 	 * "Timestamp":"Wed May 6 00:00:00 UTC-04:00 2015","MSDate":42130,
 	 * "MarketCap":50755764235,"Volume":15159291,"ChangeYTD":29.74,
@@ -35,7 +35,7 @@ public class TestConfiguration {
 	 */
 	public static Quote quote() {
 		Quote quote = new Quote();
-		quote.setName("EMC Corp");
+		quote.setName("DVMT Corp");
 		quote.setSymbol(QUOTE_SYMBOL);
 		quote.setLastPrice(QUOTE_LAST_PRICE);
 		quote.setChange(QUOTE_CHANGE);

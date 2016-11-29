@@ -42,7 +42,7 @@ public class MarketService {
 	@Autowired
 	private RestTemplate restTemplate;
 
-    @Value("${pivotal.app.symbols.it:EMC,IBM,VMW}")
+    @Value("${pivotal.app.symbols.it:DVMT,IBM,AAPL}")
 	private String symbolsIT;
     @Value("${pivotal.app.symbols.fs:JPM,C,MS}")
 	private String symbolsFS;
