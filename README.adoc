@@ -4,6 +4,7 @@
 * JDK 1.8
 * link:https://github.com/cloudfoundry/cli/releases[CF CLI]
 * (Optional) Git CLI for link:https://github.com/git-for-windows/git/releases/download/v2.9.0.windows.1/Git-2.9.0-64-bit.exe[Windows] or Git from link:https://desktop.github.com/[github.com] 
+* (Optional) Curl from link:http://curl.haxx.se/[curl.haxx.se]
 * Download or Clone this git repository
 * An IDE such as Eclipse, STS, or IntelliJ
 
