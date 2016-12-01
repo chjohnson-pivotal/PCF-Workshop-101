@@ -19,5 +19,4 @@ applications:
   - circuit-breaker-dashboard
 env:
   # Replace with API URI of target PCF environment
-  #CF_TARGET: https://api.yourpcfenvironment.local
   TRUST_CERTS: api.run.haas-98.pez.pivotal.io 

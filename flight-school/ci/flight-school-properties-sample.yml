@@ -1,8 +1,7 @@
-github-uri: https://github.com/.../flight-school.git
+github-uri: https://github.com/rossr3-pivotal/flight-school.git
 github-branch: master
-cf-api: https://api.local.micropcf.io
-cf-username: admin
-cf-password: admin
-cf-org: micropcf-org
-cf-space: micropcf-space
-cf-manifest-host: pcfdemo-ci
+cf-api: https://api.run.haas-98.pez.pivotal.io 
+cf-username: studentX 
+cf-password: <password>
+cf-org: studentX-org
+cf-space: development
