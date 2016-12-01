@@ -19,7 +19,7 @@ With these primitives you can model any pipeline, from simple (unit → integrat
 
 1.  Java SDK 1.7+
 
-2.  Pivotal CF Env or Pivotal Web Services Account. Create a free trial account here http://run.pivotal.io/[Pivotal Web Services]
+2.  Pivotal CF Env or Pivotal Web Services Account. If you are walking through this example and are not part of a hands on workshop, you can create a free trial account here http://run.pivotal.io/[Pivotal Web Services]
 
 3.  Optional Vagrant (https://vagrantup.com/[https://vagrantup.com/]) to run Concourse locally
 
@@ -33,10 +33,9 @@ The objectives of this workshop are to use Concourse to build pipelines and lear
 
 Specifically, you will learn how to
 
-1. Start and Configure a Concourse server
-2. Create a Pipeline
-3. Trigger a Pipeline using the Fly command line tool
-4. Run a pipeline to test, stage and deploy to Pivotal Cloud Foundry
+1. Create a Pipeline
+2. Trigger a Pipeline using the Fly command line tool
+3. Run a pipeline to test, stage and deploy to Pivotal Cloud Foundry
 
 == Target
 
@@ -67,13 +66,13 @@ For this section of the lab, you will use a Concourse server that has already be
 image::concourse-no-pipelines.png[]
 +
 2. Download the CLI tool by clicking on the icon that represents the operating system you are running. 
-3. The file that you download is a fully executable binary. You can move it to a folder that is in your path or specify the full pathname to the fly command as necessary in the following steps. On Macs and Linux systems, you will probably need to mark the file as executable using the following command:
+3. The file that you download is a fully executable binary. You can move it to a folder that is in your path or specify the full pathname to the fly command as necessary in the following steps. On Mac and Linux systems, you will probably need to mark the file as executable using the following command:
 +
 ```
 $ chmod +x fly
 ```
 +
-4. Open a terminal / command window and use the fly login command:
+4. Open a terminal / command window and use the fly login command (you might need to specify the full path to the fly executable binary):
 +
 ```
 $ fly -t lab login -c https://ci.rick-ross.com -k
@@ -89,32 +88,12 @@ The command that was just executed associates a target, in this case "lab", with
 
 == Creating Your First Pipeline
 
-For this section of the lab you will use an existing project to create your pipeline. 
+For this section of the lab you will use an existing project to create your pipeline which is located in the flight-school folder.
 
-1. Download or Clone the git repository located here: https://github.com/rossr3-pivotal/flight-school.git
+1. Change to the flight-school folder
 +
 ```
-$ git clone https://github.com/rossr3-pivotal/flight-school.git
-```
-+
-or download and unzip/decompress the flight-school-master.zip file
-+
-image::download-flight-school.png[]
-+
-Note that when you uncompress this zip file, the folder name is flight-school-master. 
-+
-2. Change into the folder that contains the project code
-+
-If you used the git clone command then:
-+
-```
-$ cd flight-school
-```
-+
-or if you downloaded the zip file, use this command:
-+
-```
-$ cd flight-school-master
+$ cd ../flight-school
 ```
 +
 Located in the _ci_ folder, there is a properties file called flight-school-properties-sample.yml. This file contains configuration and credential information used by the pipeline. The values contained in this file won't work so we need to customize it for our needs. Seperating out the configuraton and credential information means that we can share the pipeline across teams and avoid sharing sensitive information.
@@ -188,7 +167,7 @@ jobs:
 +
 This pipeline has two resources: a Git resource and a Cloud Foundry resource. The Git resource has a name of _flight-school_ and the Cloud Foundry resource has the name of _staging-app_. 
 
-There is also one job in this pipeline, called _test-app_. This _test-app_ job orchestrates or this pipeline by __GET__ting the source code from the flight-school (Git) resource, running the _test_ task which kicks off the build and tests then __PUT__ing results of the build into the staging-app or Cloud Foundry resource. 
+There is also one job in this pipeline, called _test-app_. This _test-app_ job orchestrates this pipeline by __GET__ting the source code from the flight-school (Git) resource, running the _test_ task which kicks off the build and tests then __PUT__ing results of the build into the staging-app or Cloud Foundry resource. 
 
 The trigger statement in the flight-school section indicates that changes to the underlying Git repository should automatically trigger the job. 
 
@@ -304,7 +283,7 @@ The command we just ran was able to successfully execute the build and test scri
 
 == Trigger the Pipeline & Deploy the App
 
-Before we can run the pipeline, it needs to be unpaused. You can do this from the Concourse User Interface or through the command line. The steps below sho
+Before we can run the pipeline, it needs to be unpaused. You can do this from the Concourse User Interface or through the command line. The steps below show how to do this from the command line.
 
 1. To see what pipelines are available run the following command:
 +
@@ -326,7 +305,7 @@ unpaused 'student7-flight-school'
 +
 3. Now go back to your browser and take a look at the pipeline. It might be running or just starting up
 +
-You will need to refresh your browser and use the menu in the upper left to see and then click on your pipeline
+You will need to *refresh your browser* and *use the menu in the upper left* to see and then click on your pipeline
 +
 image::concourse-flight-school-starting.png[]
 +
@@ -357,13 +336,13 @@ image::concourse-flight-school-running.png[]
 +
 image::sfo-current-weather.png[]
 +
-9. Manually kick off a build by clicking the plus button in the upper right
+9. Go back to Concourse in your browser and manually kick off a build by clicking the plus button in the upper right
 +
 image::manual-build.png[]
 +
 This kicks off the job again. Notice that there is now a new tab for the build that was kicked off. Concourse keeps the history of each job which provides you with easy access to the details of past executions.
 +
-A new build can also be started by running the following command:
+A new build can also be started by running the following command. 
 +
 ```
 $ fly -t lab trigger-job --job student7-flight-school/test-app
