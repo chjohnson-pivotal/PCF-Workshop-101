@@ -12,10 +12,24 @@ However, it is most easily deployed to Pivotal Cloud Foundry environments that h
 
 == Build
 
-. Using Maven, build and package the application:
+. Change to the fortune-teller folder:
 +
 ----
-$ mvn clean package
+$ cd ../fortune-teller
+----
++
+. Using Maven, build and package the application:
++
+On a Mac run the following command:
++
+----
+$ ./mvnw clean package
+----
++
+On Windows run the following command:
++
+----
+> mvnw.cmd clean package
 ----
 +
 Maven will automatically download all of _Fortune Teller_'s dependencies. This may take a few moments.
@@ -25,21 +39,85 @@ Maven will automatically download all of _Fortune Teller_'s dependencies. This m
 
 . Run `scripts/pcf-create-services.sh` to create the services that you need:
 +
+On a _Mac_ run the following script:
++
 ----
 $ ./scripts/pcf-create-services.sh
-Creating service fortunes-db in org microservices / space fortune-teller as admin...
+Creating service instance fortunes-db in org student7-org / space test as student7...
 OK
-Creating service config-server in org microservices / space fortune-teller as admin...
+Creating service instance config-server in org student7-org / space test as student7...
 OK
-Creating service service-registry in org microservices / space fortune-teller as admin...
+
+Create in progress. Use 'cf services' or 'cf service config-server' to check operation status.
+Creating service instance service-registry in org student7-org / space test as student7...
 OK
-Creating service circuit-breaker-dashboard in org microservices / space fortune-teller as admin...
+
+Create in progress. Use 'cf services' or 'cf service service-registry' to check operation status.
+Creating service instance circuit-breaker-dashboard in org student7-org / space test as student7...
 OK
+
+Create in progress. Use 'cf services' or 'cf service circuit-breaker-dashboard' to check operation status.
 ----
++
+On _Windows_ run the following script
++
+----
+> scripts/pcf-create-services.bat
+Creating service instance fortunes-db in org student7-org / space test as student7...
+OK
+Creating service instance config-server in org student7-org / space test as student7...
+OK
+
+Create in progress. Use 'cf services' or 'cf service config-server' to check operation status.
+Creating service instance service-registry in org student7-org / space test as student7...
+OK
+
+Create in progress. Use 'cf services' or 'cf service service-registry' to check operation status.
+Creating service instance circuit-breaker-dashboard in org student7-org / space test as student7...
+OK
+
+Create in progress. Use 'cf services' or 'cf service circuit-breaker-dashboard' to check operation status.
+----
++
+The commands that just ran did the following:
+
+* Created a MySQL database called fortunes-db
+* Created a Config Server instance called config-server
+* Created a Service Registry instance called service-registry
+* Created a Circuit Breaker Dashboard instance called circuit-breaker-dashboard
+
++
+Be sure you look at the script file to see exactly what is happening when the script ran.
++
 
 . Click on the *Manage* links for the *Config Service*, *Service Registry*, and *Circuit Breaker Dashboard*. Make sure the services are finished initializing before you proceed.
 
-. Edit the `manifest-pcf.yml` file to specify the Cloud Foundry target the apps are being pushed to, replacing the URL in `CF_TARGET: https://api.yourpcfenvironment.local` with the API endpoint for your Cloud Foundry deployment.
++
+You can also look at the current state by using the following command:
++
+----
+$ cf services
+Getting services in org student7-org / space test as student7...
+OK
+
+name                        service                       plan        bound apps   last operation
+circuit-breaker-dashboard   p-circuit-breaker-dashboard   standard                 create in progress
+config-server               p-config-server               standard                 create in progress
+fortunes-db                 p-mysql                       100mb-dev                create succeeded
+service-registry            p-service-registry            standard                 create in progress
+workshopDB                  p-mysql                       100mb-dev   workshop     create succeeded
+----
++
+Be sure that all of the services have been created successfully before proceeding.
++
+
+. Edit the `manifest-pcf.yml` file to specify the Cloud Foundry target the apps are being pushed to, replacing the URL in `TRUST_CERTS: api.run.haas-98.pez.pivotal.io` with the API endpoint for your Cloud Foundry deployment which can be determined by using the following command:
++
+----
+$ cf api
+API endpoint: https://api.run.haas-98.pez.pivotal.io (API version: 2.58.0)
+----
++
 
 . Push the microservices:
 
@@ -62,7 +140,7 @@ image:docs/images/fortunes_1.png[]
 $ cf stop fortune-service
 ----
 
-. Access the fortunes-ui and see that the ``fallback fortune'' is being returned.
+. Access the fortunes-ui and see that the ``fallback fortune'' is being returned. Note that this default is retrieved from the github repository that was used when the config-service was created above. 
 +
 image:docs/images/fortunes_4.png[]
 

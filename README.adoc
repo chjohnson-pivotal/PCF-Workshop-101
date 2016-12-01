@@ -132,7 +132,7 @@ Note the difference in folder names if you clone the repository vs downloading i
 
 ## Section 2
 * link:https://github.com/rossr3-pivotal/spring-boot-rest-redis-tutorial[Building a Spring Boot Application using REST and Redis]
-* link:cf-spring-trader/README.md[Advanced Lab - Spring Cloud Services, _**Java** Only_]
+* link:fortune-teller/README.adoc[Advanced Lab - Spring Cloud Services _**Java** Only_]
 
 ## Section 3
 * link:labs/lab8/lab.adoc[Lab - Building Pipelines using Concourse.ci]
