@@ -320,7 +320,7 @@ image::concourse-test-app-tests-detail.png[]
 6. Once the pipeline has completed successfully, verify that the app is running in cloud foundry:
 +
 ```
-$ $ cf apps
+$ cf apps
 Getting apps in org student7-org / space development as instructor...
 OK
 
