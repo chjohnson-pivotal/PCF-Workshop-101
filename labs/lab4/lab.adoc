@@ -13,9 +13,9 @@ Effective management of logs has historically been very difficult.
 Cloud Foundry's https://github.com/cloudfoundry/loggregator[log aggregation] components simplify log management by assuming responsibility for it.
 Application developers need only log all messages to either `STDOUT` or `STDERR`, and the platform will capture these messages.
 
-=== For Developers
+Application developers can view application logs using the CF CLI, through the App Manager and through PCF Metrics. 
 
-Application developers can view application logs using the CF CLI.
+=== Using the Command Line
 
 . Let's view recent log messages for the application.  For this lab you can use the Java, Ruby, or Node.js sample app.  In each of the commands below replace _workshop_ with the name of your deployed application:
 +
@@ -62,60 +62,45 @@ $ cf logs workshop
 +
 You can try various things like refreshing the browser and triggering stop/start events to see logs being generated.
 
-=== For Operators (OPTIONAL)
+=== Using the App Manager
 
-Application operators will also enjoy commands like `cf logs`, but are often interested in long-term retention, indexing, and analysis of logs as well.
-Cloud Foundry currently only provides short-term retention of logs.
-To meet these needs, Cloud Foundry provides the ability to http://docs.cloudfoundry.org/devguide/services/log-management.html[drain logs to third-party providers.]
-
-In this section, we'll drain logs to a very simple provider called https://papertrailapp.com[Papertrail].
-
-. Visit https://papertrailapp.com and create a free account.
-
-. Login to your account and add your first system:
+. Open up the App Manager by navigating to  https://apps.run.haas-98.pez.pivotal.io/[https://apps.run.haas-98.pez.pivotal.io/] and logging in if necessary
 +
-image::papertrail_1.png[]
-
-. Click on ``Heroku'':
+image::app-mgr-org-view.png[]
 +
-image::papertrail_2.png[]
-
-. Choose ``I use Heroku'' and provide a name:
+. Navigate to the space in which your application is deployed by clicking on the space name on the left
 +
-image::papertrail_3.png[]
-
-. Note the URL + Port assigned to your application:
+image::app-mgr-space-view.png[]
 +
-image::papertrail_4.png[]
-
-. We'll use a Cloud Foundry http://docs.cloudfoundry.org/devguide/services/user-provided.html[user-provided service instance] to create the log drain for our application using the URL + Port provided by Papertrail:
+. Click on the name of your application (e.g. workshop)
 +
-----
-$ cf cups workshop-logs -l syslog://logs2.papertrailapp.com:43882
-Creating user provided service workshop-logs in org TELCO / space gammon as admin...
-OK
-----
-
-. We bind that service instance into our application
+image::app-mgr-app-view.png[]
 +
-----
-$ cf bind-service workshop workshop-logs
-Binding service workshop-logs to app workshop in org TELCO / space gammon as admin...
-OK
-TIP: Use 'cf restage workshop' to ensure your env variable changes take effect
-----
-
-. We'll use a `cf restart` rather than `cf restage` to make the binding take effect:
+. Click on the Logs tab
 +
-----
-$ cf restart workshop
-----
+image::applogs-via-app-mgr.png[]
 
-. Navigate to the home Dashboard of the Papertrail app and select your 'system' to see log events immediately flowing to the log viewing page:
+=== Using PCF Metrics
+
+In addition to the tools we have already seen for inspecting logs, there is another way to look at what is going on in your applications. PCF Metrics is designed to help developers better understand the health and performance of the apps running on Pivotal Cloud Foundry.
+
+. Go back to the Apps Manager and click on the Overview Tab for the workshop application
 +
-image::papertrail_5.png[]
-
-You can see how to connect to other third-party log management systems in the http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html[Cloud Foundry documentation].
+image::app-mgr-overview.png[]
++
+. Click on the View in PCF Metrics link, located in the Status section. You will need to click through the SSL security warnings. The Metrics dashboard is shown. 
++
+image::metrics-dashboard.png[]
++
+The dashboard shows recent events, certain container metrics such as CPU, Memory and Disk and Network Metrics of your application. 
++
+. Click on the Explore menu on the left side
++
+image::metrics-explore-view.png[]
++
+In this view, you get the ability to drill down to what is happening within your application. The time scale at the upper left allows you to either zoom into more granular detail or zoom out to see an overal perspective. You can use the slider on the time line to choose specific timeframes to investigate.
++
+In the middle of the page you can use the filter and highlight capabilites to enter words to look for in the application logs shown below. The Sources drop down allows you to include or exclude information specific to your application and/or Cloud Foundry components. Experiment with these capabilities.
 
 == Health Management
 
