@@ -131,7 +131,7 @@ Note the difference in folder names if you clone the repository vs downloading i
 * link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
 
 ## Section 2
-* link:spring-boot-rest-redist-tutorial/README.adoc[Building a Spring Boot Application using REST and Redis]
+* link:spring-boot-rest-redis-tutorial/README.adoc[Building a Spring Boot Application using REST and Redis]
 * link:fortune-teller/README.adoc[Advanced Lab - Spring Cloud Services _**Java** Only_]
 
 ## Section 3
