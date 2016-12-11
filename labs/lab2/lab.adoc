@@ -37,7 +37,7 @@ $ cf marketplace
 and you'll get a list of services, their available plans, and descriptions. On link:http://run.pivotal.io/[Pivotal Web Services - PWS] the ``free'' tier of plans is normally the first one listed.
 
 The second way is specific to Pivotal Cloudfoundry's Apps Manager UI.
-If you haven't already, login to it by visiting link:https://apps.run.haas-98.pez.pivotal.io/[https://apps.run.haas-98.pez.pivotal.io/] and using the same credentials provided to you in the workshop.
+If you haven't already, login to it by visiting link:https://apps.run.haas-90.pez.pivotal.io/[https://apps.run.haas-90.pez.pivotal.io/] and using the same credentials provided to you in the workshop.
 
 Click on the ''Marketplace'' link:
 
