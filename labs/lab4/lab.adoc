@@ -64,7 +64,7 @@ You can try various things like refreshing the browser and triggering stop/start
 
 === Using the App Manager
 
-. Open up the App Manager by navigating to  https://apps.run.haas-98.pez.pivotal.io/[https://apps.run.haas-98.pez.pivotal.io/] and logging in if necessary
+. Open up the App Manager by navigating to  https://apps.run.haas-90.pez.pivotal.io/[https://apps.run.haas-90.pez.pivotal.io/] and logging in if necessary
 +
 image::app-mgr-org-view.png[]
 +
