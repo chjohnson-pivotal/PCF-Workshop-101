@@ -86,14 +86,15 @@ In addition to the tools we have already seen for inspecting logs, there is anot
 
 . Open a new browser tab and navigate to https://metrics.run.haas-90.pez.pivotal.io[https://metrics.run.haas-90.pez.pivotal.io] to open the PCF Metrics page for this PCF instance.
 +
-image::metrics-dropdown.png[]
-+
-
-+
 image::metrics-start.png[]
 +
 
 . In the search box at the top of the screen type in the name of your application.  You should see a dropdown box, and there will likely be multiple apps with the same name.  Choose the app from the drop down that matches the org and space for your student id.
++
+image::metrics-dropdown.png[]
++
+
+. Once you have picked your application the page should populate with information about your running applicaiton.  This includes container info, events, and logs.
 +
 image::metrics-dashboard.png[]
 +
