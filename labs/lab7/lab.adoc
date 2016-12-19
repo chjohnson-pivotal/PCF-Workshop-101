@@ -14,7 +14,7 @@ In this lab we will push a .NET Core web application to cloud foundry.
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf api https://api.sys.azure.rick-ross.com --skip-ssl-validation
+$ cf api https://api.run.haas-72.pez.pivotal.io --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:

@@ -94,8 +94,8 @@ $ export CF_HOME=/pcf
 
 For Windows use the following command:
 ```
-> md /pcf
-> set CF_HOME=/pcf
+> md c:\pcf
+> set CF_HOME=c:\pcf
 ```
 
 And rerun the cf command to verify that it is working correctly.

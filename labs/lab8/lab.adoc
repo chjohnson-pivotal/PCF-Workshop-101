@@ -44,7 +44,7 @@ Specifically, you will learn how to
 2. Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ```
-$ cf api https://api.run.haas-98.pez.pivotal.io --skip-ssl-validation
+$ cf api https://api.run.haas-72.pez.pivotal.io --skip-ssl-validation
 ```
 +
 3. Login to Pivotal Cloud Foundry
@@ -127,7 +127,7 @@ An example of this file with it filled out looks like this:
 ```
 github-uri: https://github.com/rossr3-pivotal/flight-school.git
 github-branch: master
-cf-api: https://api.run.haas-98.pez.pivotal.io
+cf-api: https://api.run.haas-72.pez.pivotal.io
 cf-username: *your student login*
 cf-password: *password redacted*
 cf-org: student7-org
@@ -191,7 +191,7 @@ resources:
     name: staging-app
     type: cf
     source:
-      api: https://api.run.haas-98.pez.pivotal.io
+      api: https://api.run.haas-72.pez.pivotal.io
       organization: student7-org
       password: *password redacted*
       skip_cert_check: true
@@ -325,7 +325,7 @@ Getting apps in org student7-org / space development as instructor...
 OK
 
 name            requested state   instances   memory   disk   urls
-flight-school   started           1/1         128M     1G     fs-haggish-ectoderm.cfapps.haas-98.pez.pivotal.io
+flight-school   started           1/1         128M     1G     fs-haggish-ectoderm.cfapps.haas-72.pez.pivotal.io
 ```
 +
 7. Copy the URL and paste it into the browser and verify that the application is running:
