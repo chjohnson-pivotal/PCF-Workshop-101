@@ -50,7 +50,7 @@ image::lab2.png[]
 == Creating and Binding to a Service Instance
 
 . Let's begin by creating a MySQL service instance.
-From the Apps Manager UI service marketplace, select _MySQL for Pivotal Cloudfoundry_, select the 100mb-dev plan, and provide an instance name.
+From the Apps Manager UI service marketplace, select _MySQL for Pivotal Cloudfoundry_, select the 100mb plan, and provide an instance name.
 In the drop-down list next to _Bind to App_ select your workshop application.
 +
 image::lab3.png[]
@@ -58,7 +58,7 @@ image::lab3.png[]
 Alternatively, you can use the Cloud Foundry CLI to create and bind services from the command line.  To create a service from the command line, run the following command:
 +
 ----
-$ cf create-service p-mysql 100mb-dev workshopDB
+$ cf create-service p-mysql 100mb workshopDB
 ----
 +
 And to bind the service to an existing application, run the following command: 
