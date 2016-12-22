@@ -84,7 +84,7 @@ image::applogs-via-app-mgr.png[]
 
 In addition to the tools we have already seen for inspecting logs, there is another way to look at what is going on in your applications. PCF Metrics is designed to help developers better understand the health and performance of the apps running on Pivotal Cloud Foundry.
 
-. Open a new browser tab and navigate to https://metrics.run.haas-90.pez.pivotal.io[https://metrics.run.haas-90.pez.pivotal.io] to open the PCF Metrics page for this PCF instance.
+. Open a new browser tab and navigate to https://metrics.run.haas-72.pez.pivotal.io[https://metrics.run.haas-72.pez.pivotal.io] to open the PCF Metrics page for this PCF instance.
 +
 image::metrics-start.png[]
 +
